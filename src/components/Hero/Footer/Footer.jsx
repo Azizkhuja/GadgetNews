@@ -23,11 +23,11 @@ const Footer = () => {
           <Container>
             <Grid container spacing={5}>
               <Grid item xs={12} sm={8}>
-                <Box>
-                  <Typography>
-                    gadget news is where tomorrow is realized. It is the
+                <Box borderBottom={1}>
+                  <Typography sx={{ textTransform: "none" }}>
+                    GADGET NEWS is where tomorrow is realized. It is the
                     essential source of information and ideas that make sense of
-                    a world in constant transformation. The gadget news
+                    a world in constant transformation. The GADGET NEWS
                     conversation illuminates how technology is changing every
                     aspect of our lives—from culture to business, science to
                     design. The breakthroughs and innovations that we uncover
@@ -38,17 +38,25 @@ const Footer = () => {
                 <Box
                   sx={{ display: "flex", justifyContent: "space-around" }}
                   mt={2}
-                  borderBottom={1}
                 >
-                  <SiFacebook size={40} />
-                  <SiTwitter size={40} />
-                  <SiPinterest size={40} />
-                  <SiYoutube size={40} />
-                  <SiInstagram size={40} />
-                  <SiTiktok size={40} />
+                  <SiFacebook size={34} />
+                  <SiTwitter size={34} />
+                  <SiPinterest size={34} />
+                  <SiYoutube size={34} />
+                  <SiInstagram size={34} />
+                  <SiTiktok size={34} />
                 </Box>
               </Grid>
               <Grid item xs={12} sm={2}>
+                <Box borderBottom={1}>
+                  <Typography>9to5mac</Typography>
+                </Box>
+                <Box borderBottom={1}>
+                  <Typography>techradar</Typography>
+                </Box>
+                <Box borderBottom={1}>
+                  <Typography>gsmarena</Typography>
+                </Box>
                 <Box borderBottom={1}>
                   <Typography>theverge</Typography>
                 </Box>
@@ -68,6 +76,15 @@ const Footer = () => {
                 </Box>
                 <Box borderBottom={1}>
                   <Typography>Cookie</Typography>
+                </Box>
+                <Box borderBottom={1}>
+                  <Typography>Advertise</Typography>
+                </Box>
+                <Box borderBottom={1}>
+                  <Typography>Customer Care</Typography>
+                </Box>
+                <Box borderBottom={1}>
+                  <Typography>contact us</Typography>
                 </Box>
               </Grid>
             </Grid>
