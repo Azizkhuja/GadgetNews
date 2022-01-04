@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import DevicesOtherTwoToneIcon from "@mui/icons-material/DevicesOtherTwoTone";
 import {
   AppBar,
@@ -42,7 +43,11 @@ const Navbar = () => {
             component="div"
             sx={{ mr: 2, display: { xs: "none", md: "flex" } }}
           >
-            <DevicesOtherTwoToneIcon fontSize="large" color="action" />
+            <Button>
+              <Link to="/">
+                <DevicesOtherTwoToneIcon fontSize="large" color="action" />
+              </Link>
+            </Button>
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
@@ -87,7 +92,11 @@ const Navbar = () => {
             component="div"
             sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}
           >
-            <DevicesOtherTwoToneIcon fontSize="large" />
+            <Button>
+              <Link to="/">
+                <DevicesOtherTwoToneIcon fontSize="large" />
+              </Link>
+            </Button>
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page) => (
@@ -96,7 +105,7 @@ const Navbar = () => {
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: "white", display: "block" }}
               >
-                {page}
+                <Link to={page}>{page}</Link>
               </Button>
             ))}
           </Box>
