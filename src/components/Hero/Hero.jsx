@@ -9,6 +9,7 @@ import {
   Divider,
 } from "@mui/material";
 import { useQuery } from "react-query";
+import useMediaQuery from "@mui/material/useMediaQuery";
 import HeroLeftChild from "./HeroLeftChild";
 import HeroRight from "./HeroRight";
 
@@ -87,7 +88,7 @@ const fetchData = async () => {
 };
 
 const Hero = () => {
-  // const [mainData, setMainData] = useState([]);
+  const matches = useMediaQuery("(max-width:600px)");
   const { isLoading, data } = useQuery("getHeroNews", fetchData);
 
   if (isLoading) {
@@ -96,19 +97,23 @@ const Hero = () => {
 
   return (
     <Container>
-      <Typography variant="h2" m={3} sx={{ textAlign: "center" }}>
+      <Typography
+        variant={matches ? "h5" : "h3"}
+        m={3}
+        sx={{ textAlign: "center" }}
+      >
         Welcome to Gadget world!
       </Typography>
 
       <Grid container spacing={2}>
         {/* Left Bar */}
-        <Grid item xs={12} md={8}>
+        <Grid item xs={12} sm={8} md={8}>
           <Grid container spacing={2}>
-            <Grid item xs={4}>
+            <Grid item xs={12} md={4}>
               <HeroLeftChild />
             </Grid>
-            <Grid item xs={8}>
-              {data.slice(0, 8).map((hero, idx) => {
+            <Grid item xs={12} md={8}>
+              {data.slice(0, 9).map((hero, idx) => {
                 return (
                   <Card key={idx}>
                     <CardActionArea target="_blank" href={hero.link}>
@@ -136,7 +141,7 @@ const Hero = () => {
           </Grid>
         </Grid>
         {/* Right Bar */}
-        <Grid item xs={12} md={4}>
+        <Grid item xs={12} sm={4} md={4}>
           <HeroRight />
         </Grid>
       </Grid>

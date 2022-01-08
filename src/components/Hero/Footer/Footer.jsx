@@ -5,6 +5,7 @@ import {
   Typography,
   Grid,
   Container,
+  Button,
 } from "@mui/material";
 import {
   SiInstagram,
@@ -14,15 +15,19 @@ import {
   SiYoutube,
   SiTiktok,
 } from "react-icons/Si";
+import { Link } from "react-router-dom";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 const Footer = () => {
+  const matches = useMediaQuery("(max-width:600px)");
+  const matchesMin = useMediaQuery("(max-width:400px)");
   return (
-    <Box mt={1}>
+    <Box mt={1} className="footer">
       <AppBar position="static">
         <Toolbar sx={{ textTransform: "uppercase", padding: 4 }}>
           <Container>
             <Grid container spacing={5}>
-              <Grid item xs={12} sm={8}>
+              <Grid item xs={12} sm={6}>
                 <Box borderBottom={1}>
                   <Typography sx={{ textTransform: "none" }}>
                     GADGET NEWS is where tomorrow is realized. It is the
@@ -35,39 +40,72 @@ const Footer = () => {
                     industries.
                   </Typography>
                 </Box>
-                <Box
-                  sx={{ display: "flex", justifyContent: "space-around" }}
-                  mt={2}
-                >
-                  <SiFacebook size={34} />
-                  <SiTwitter size={34} />
-                  <SiPinterest size={34} />
-                  <SiYoutube size={34} />
-                  <SiInstagram size={34} />
-                  <SiTiktok size={34} />
+                <Grid container mt={2}>
+                  <Button
+                    target="_blank"
+                    href="https://www.facebook.com/"
+                    sx={{ color: "white" }}
+                  >
+                    <SiFacebook size={matches ? 20 : 26} />
+                  </Button>
+                  <Button
+                    target="_blank"
+                    href="https://twitter.com/home"
+                    sx={{ color: "white" }}
+                  >
+                    <SiTwitter size={matches ? 20 : 26} />
+                  </Button>
+                  <Button
+                    target="_blank"
+                    href="https://www.pinterest.com/"
+                    sx={{ color: "white" }}
+                  >
+                    <SiPinterest size={matches ? 20 : 26} />
+                  </Button>
+                  <Button
+                    target="_blank"
+                    href="https://www.youtube.com/"
+                    sx={{ color: "white" }}
+                  >
+                    <SiYoutube size={matches ? 20 : 26} />
+                  </Button>
+                  <Button
+                    target="_blank"
+                    href="https://www.instagram.com/"
+                    sx={{ color: "white" }}
+                  >
+                    <SiInstagram size={matches ? 20 : 26} />
+                  </Button>
+                  <Button
+                    target="_blank"
+                    href="https://www.tiktok.com/"
+                    sx={{ color: "white" }}
+                  >
+                    <SiTiktok size={matches ? 20 : 26} />
+                  </Button>
+                </Grid>
+              </Grid>
+              <Grid item xs={12} sm={3}>
+                <Box borderBottom={1}>
+                  <Link to="/9to5Mac">9to5mac</Link>
+                </Box>
+                <Box borderBottom={1}>
+                  <Link to="/TechRadar">techradar</Link>
+                </Box>
+                <Box borderBottom={1}>
+                  <Link to="/GSMArena">gsmarena</Link>
+                </Box>
+                <Box borderBottom={1}>
+                  <Link to="/TheVerge">theverge</Link>
+                </Box>
+                <Box borderBottom={1}>
+                  <Link to="/TechCrunch">techcrunch</Link>
+                </Box>
+                <Box borderBottom={1}>
+                  <Link to="/Wired">wired</Link>
                 </Box>
               </Grid>
-              <Grid item xs={12} sm={2}>
-                <Box borderBottom={1}>
-                  <Typography>9to5mac</Typography>
-                </Box>
-                <Box borderBottom={1}>
-                  <Typography>techradar</Typography>
-                </Box>
-                <Box borderBottom={1}>
-                  <Typography>gsmarena</Typography>
-                </Box>
-                <Box borderBottom={1}>
-                  <Typography>theverge</Typography>
-                </Box>
-                <Box borderBottom={1}>
-                  <Typography>techcrunch</Typography>
-                </Box>
-                <Box borderBottom={1}>
-                  <Typography>wired</Typography>
-                </Box>
-              </Grid>
-              <Grid item xs={12} sm={2}>
+              <Grid item xs={12} sm={3}>
                 <Box borderBottom={1}>
                   <Typography>Career</Typography>
                 </Box>

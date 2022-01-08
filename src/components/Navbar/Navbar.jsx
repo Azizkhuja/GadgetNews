@@ -45,7 +45,7 @@ const Navbar = () => {
           >
             <Button>
               <Link to="/">
-                <DevicesOtherTwoToneIcon fontSize="large" color="action" />
+                <DevicesOtherTwoToneIcon fontSize="large" />
               </Link>
             </Button>
           </Typography>
@@ -81,7 +81,11 @@ const Navbar = () => {
             >
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+                  <Button>
+                    <Link className="mb-links" to={page}>
+                      {page}
+                    </Link>
+                  </Button>
                 </MenuItem>
               ))}
             </Menu>

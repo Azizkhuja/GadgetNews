@@ -12,6 +12,9 @@ import {
   Box,
 } from "@mui/material";
 
+const stableImage =
+  "https://cdn.vox-cdn.com/uploads/chorus_asset/file/9672633/VergeOG.0_1200x627.0.png";
+
 const theVergeFetchData = async () => {
   let url = "https://tech-news3.p.rapidapi.com/verge";
   return (
@@ -43,7 +46,7 @@ const TheVerge = () => {
                     <CardMedia
                       component="img"
                       height="140"
-                      image={hero.img}
+                      image={hero.img || stableImage}
                       alt={hero.title}
                     />
                     <CardContent>
