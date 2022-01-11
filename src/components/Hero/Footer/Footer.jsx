@@ -20,10 +20,9 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 
 const Footer = () => {
   const matches = useMediaQuery("(max-width:600px)");
-  const matchesMin = useMediaQuery("(max-width:400px)");
   return (
     <Box mt={1} className="footer">
-      <AppBar position="static">
+      <AppBar position="static" color="secondary">
         <Toolbar sx={{ textTransform: "uppercase", padding: 4 }}>
           <Container>
             <Grid container spacing={5}>
