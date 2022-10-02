@@ -14,14 +14,7 @@ import {
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 
-const pages = [
-  "9to5Mac",
-  "TechRadar",
-  "GSMArena",
-  "TheVerge",
-  "TechCrunch",
-  "Wired",
-];
+const pages = ["9to5Mac", "TechRadar", "GSMArena", "TechCrunch", "Wired"];
 
 const Navbar = () => {
   const [anchorElNav, setAnchorElNav] = useState(null);

@@ -9,7 +9,7 @@ import {
 import { useQuery } from "react-query";
 
 const fetchDataVerge = async () => {
-  let url = "https://tech-news3.p.rapidapi.com/verge";
+  let url = "https://tech-news3.p.rapidapi.com/wired";
   return (
     await fetch(url, {
       method: "GET",

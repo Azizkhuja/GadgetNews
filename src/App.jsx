@@ -26,7 +26,6 @@ function App() {
             <Route path="/9to5Mac" element={<NineToFivemac />} />
             <Route path="/TechRadar" element={<TechRader />} />
             <Route path="/GSMArena" element={<Gsmarena />} />
-            <Route path="/TheVerge" element={<TheVerge />} />
             <Route path="/TechCrunch" element={<TechCrunch />} />
             <Route path="/Wired" element={<Wired />} />
           </Routes>
