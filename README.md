@@ -1,4 +1,5 @@
-## Gadget-News and [Demo link](https://gadget-news.netlify.app/)
+## Gadget-News
+[Demo link](https://gadget-news.netlify.app/)
 
 ![Screenshot](Gadget-News.png)
 
